@@ -1,0 +1,42 @@
+Inputs:
+- Ingredient the user wants to cook with
+- Upper limit for calories
+- Dietary restrictions
+- Number of recipes desired
+- Choice on whether the user would like to see
+    - Ingredients
+    - Nutritional facts
+    - Grocery stores nearby
+        - User’s location
+
+Outputs:
+- List of potential recipes
+- Ingredient list
+- Dataframe of nutritional facts
+- Grocery stores nearby
+    - Visualization on map
+
+Revised Algorithm
+
+1. Import required modules
+2. Ask user what ingredient they would like to cook with
+3. Ask user for their upper limit on the calories they would want
+4. Ask user if there are any dietary restrictions
+5. Ask user for number of results they would like
+6. Set url variable to API, including user inputs
+7. Get access to that url (into response object)
+8. Convert to readable dictionary (from JSON)
+9. Refractor the fetching of the recipes into a function
+    - have function accept arguments from user inputs
+    - have function return recipes
+10. Show the user the recipes that fit their criteria
+11. Ask user to select which recipe they would like to know more about
+12. From the selected recipe, ask if the user would like to see the ingredients
+13. If so, output each ingredient in on a new line. If not, move onto the next step
+14. Ask user if they would like to see the nutritional facts about the selected recipe
+15. If so, create a dataframe to display it. If not, move onto the next step
+16. Ask the user if they would like to find grocery stores nearby
+17. If so, ask them for their location and provide a list of grocery stores in that location
+18. Refractor access to Yelp’s API as a function
+19. Provide the option of displaying those grocery stores on a map
+20. Error handle
